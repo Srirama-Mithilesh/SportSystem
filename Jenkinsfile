@@ -3,13 +3,19 @@ pipeline {
 
   stages {
     stage('clone') {
-      bat "mvn clean"
+      steps {
+        bat "mvn clean"
+      }
     }
     stage('install') {
-      bat "mvn install"
+      steps {
+        bat "mvn install"
+      }
     }
     stage('package') {
-      bat "mvn package"
+      steps {
+        bat "mvn package"
+      }
     }
   }
 }
